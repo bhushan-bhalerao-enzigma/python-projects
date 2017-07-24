@@ -1,0 +1,126 @@
+﻿body {    
+    background-color: rgba(158, 158, 158, 0.18);
+}
+a:link, a:visited {
+    background-color: #0275d8;
+    color: white;
+    padding: 5px 0.9em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.tableHeadingParent{
+    background-color: rgba(2, 117, 216, 0.16);
+    color: hsl(0, 55%, 40%);
+    height: 4em;
+    font-size: x-large;
+    font-family: serif;
+}
+.tableHeading{
+    margin-left:2%;
+}   
+.section-1{     
+     border-style: groove;
+     border-color: lightblue;
+     padding: 1px;
+     margin-left: 2%;
+     margin-top: 2%;
+     margin-bottom: 2%;
+     height: 100%;
+     background-color: #f7f7f9;
+}
+.section-2{
+    height: 15%;
+    margin-bottom: 2%;
+}
+.AddButton{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.EditDeleteButton{
+    padding: 1%;
+}
+tr {
+    border-bottom-style: solid;
+}
+.table td{
+   word-break: break-word;
+   max-width: 15em;
+}
+
+.contactForm{
+    margin-left: 20%;
+    margin-top: 5%;
+    width: 60%;
+    border-style: groove;
+    border-color: lightblue;
+    padding: 0.4%;
+    background-color: white;
+}
+.contactForm .Section-Form{
+    background-color: #ffebdc;
+    padding: 2%;
+}
+
+.contactForm .Section-Form .Section-heading{
+    padding-top: 1%;
+    width: 100%;
+    height: 14em;
+    background-image: url(../application_img/Contact.jpg);
+    background-size: cover;
+    margin-bottom: 4%;
+}
+.formClass label{
+    font-size: x-large;
+}
+.contactForm tr{
+    border-bottom-style: none!important;
+    height: 50px;    
+    font-family: serif;
+}
+.tableAddForm{
+  width:100%;
+
+}
+.tableTd{
+    width: 32em;
+}
+.submitButton{
+    background-image: url(../application_img/AddContact.jpg);
+    height: 14em;
+    width: 15em;
+}
+.submitButtonParentDiv{
+    display: inline;
+}
+.tdAddContactButton{
+    padding-left: 7em;
+
+}
+.tdGoToHomeButton {
+    padding-left: 3em;
+}
+.buttonAddContact{
+    background-color: antiquewhite;
+    color: chocolate;
+    font-family: cursive;
+    border-radius: 25px;
+    font-size: x-large;
+    border-color: burlywood;
+}
+.divInputSearchBox{
+    margin-left: 66%;
+}
+.inputSearchBox{
+    width: 97%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(../application_img/searchicon.jpeg);
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+}

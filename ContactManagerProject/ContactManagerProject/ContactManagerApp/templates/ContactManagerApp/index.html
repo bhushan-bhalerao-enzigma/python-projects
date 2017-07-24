@@ -1,0 +1,59 @@
+{% extends 'ContactManagerApp/layout.html' %}
+{% block content %}
+<form>
+  <div class="container">
+    <div class="section-1">
+      <div class="tableHeadingParent">
+        <div class="tableHeading">Contact Manager</div>
+        <div class="divInputSearchBox"><input type="text" name="search" placeholder="Search.." class="inputSearchBox" onkeyup="searchContact(event,this)"></div>
+      </div>
+      <div class="section-2">
+        <button class="btn btn-primary AddButton" type="submit" formaction="/contact/insert_contact/{{Item.pk}}" formmethod="get">Add</button>
+      </div>
+      <div class="container">
+      {% csrf_token %}
+        <table class="table table-striped" border="1">        
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% for Item in ContactList %}
+            <tr>
+              <td>{{Item.pk}}</td>
+              <td>{{Item.FirstName}}</td>
+              <td>{{Item.LastName}}</td>
+              <td>{{Item.Email}}</td>
+              <td>{{Item.MobileNo}}</td>
+              <td><button class="btn btn-primary EditDeleteButton" type="submit" formaction="/contact/modify_contact/{{Item.pk}}" formmethod="get">Edit</button>
+                  <button class="btn btn-primary EditDeleteButton" type="submit" formaction="/contact/delete_contact/{{Item.pk}}" formmethod="get" onclick="deleteContact(event,this)">Delete</button></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span class="step-links">
+              {% if ContactList.has_previous %}
+                  <a href="?page={{ contacts.previous_page_number }}">previous</a>
+              {% endif %}
+
+              <span class="current">
+                  Page {{ ContactList.number }} of {{ ContactList.paginator.num_pages }}.
+              </span>
+
+              {% if ContactList.has_next %}
+                  <a href="?page={{ ContactList.next_page_number }}">next</a>
+              {% endif %}
+          </span>
+      </div>
+      </div> 
+    </div> 
+  </div> 
+</form>
+{% endblock %}

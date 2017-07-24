@@ -1,0 +1,29 @@
+{% extends 'ContactManagerApp/layout.html' %}
+{% block content %}
+<div class="contactForm">
+    <div class="Section-Form">{{Error}}
+        <form action="{{postUrl}}" method="post">
+            {% csrf_token %}
+            <div class="Section-heading">
+           
+            </div>
+            <div>
+              <table>
+                <tr>
+                  <td class="tableTd">
+                    <table class="tableAddForm">{{ form.as_table }}</table>                    
+                  </td>
+                  <td>
+                    <input type="submit" value="" class="submitButton" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tdAddContactButton"><input type="submit" value="Add Contact" class="buttonAddContact" /></td>
+                  <td class="tdGoToHomeButton"><a href="/contact/" style="border-style: inset;">Go to Home</a></td>
+                </tr>                     
+              </table>           
+            </div>  
+         </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact List</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ContactManagerApp/vendor_css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'ContactManagerApp/vendor_css/contact.css' %}" />
+    <script src="{% static 'ContactManagerApp/vendor_js/jquery-1.10.2.min.js' %}"></script>
+    <script src="{% static 'ContactManagerApp/vendor_js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'ContactManagerApp/application_js/ContactApp.js' %}"></script>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
